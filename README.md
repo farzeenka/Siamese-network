@@ -2,28 +2,23 @@
 
 ## Overview
 
+This repository develops a robust Siamese neural network model for detecting and localizing changes in image data—motivated by two key domains:
 
-This repository implements a convolutional Siamese neural network tailored for writer-independent offline signature verification. The core objective is to train a model that learns a similarity metric between pairs of signature images, enabling the system to:
+1. Simulation Flow-Field Validation: Inspired by industrial simulations where small code modifications can alter flow patterns, we use the Siamese framework to identify deviations from reference flow-field images.
 
-Verify Authenticity: Accurately distinguish between genuine signatures and skilled forgeries.
+2. Signature Verification: Leveraging ideas from SigNet (Dey et al., 2017), we include an offline signature dataset to demonstrate writer-independent verification.
 
-Generalize Across Writers: Operate without retraining for each new signer, making it writer-independent.
-
-Interpret Decisions: Produce similarity scores and localization maps that highlight regions of the signature contributing to match/mismatch.
+Because of confidentiality constraints, the actual simulation datasets cannot be included. Instead, a small signature dataset is bundled under dataset/ for general testing.
 
 Key Features:
 
-Pretrained Backbone: Uses a ResNet-50 encoder (ImageNet weights) truncated to produce 256-dimensional embeddings.
+Generalized Architecture: Convolutional Siamese network with a ResNet-50 backbone producing 256-dimensional embeddings.
 
-Contrastive Loss: Implements a custom DistanceLayer for pairwise contrastive loss (α=5, margin=0.5).
+Contrastive Loss: Custom DistanceLayer implements contrastive loss (α=5, margin=0.5) to learn meaningful similarity metrics.
 
-Flexible Data Handling: Data generators load and preprocess images from dataset/real and dataset/forgeries, creating TensorFlow tf.data.Dataset pipelines for efficient training.
+Multiple Domains: Although real simulation data is confidential, the model has been validated on synthetic flow-field examples and a public signature dataset.
 
-Evaluation & Visualization: After training, the model computes cosine similarity distributions on test splits and plots them via utils.plotSimilarities, providing intuitive diagnostics of model performance.
-
-This implementation is motivated by SigNet (Dey et al., 2017).
-
-
+Visualization & Interpretability: After evaluation, similarity distributions and error-localization heatmaps are generated via utils.plotSimilarities.
 
 ### 1. Clone your fork
 
