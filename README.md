@@ -2,23 +2,15 @@
 
 ## Overview
 
-This repository develops a robust Siamese neural network model for detecting and localizing changes in image data—motivated by two key domains:
+Inspired by SigNet: Convolutional Siamese Network for Writer Independent Offline Signature Verification (Dey et al., 2017) , this project develops a robust Siamese CNN framework to detect and localize changes in simulation outputs. While I cannot include confidential simulation datasets here, I have validated the model on proprietary flow-field simulation data showing high accuracy in identifying deviations. Additionally, a public signature dataset is provided in this repository for demonstration and testing of the same similarity-learning pipeline on offline signature verification tasks.
 
-1. Simulation Flow-Field Validation: Inspired by industrial simulations where small code modifications can alter flow patterns, we use the Siamese framework to identify deviations from reference flow-field images.
+Key objectives:
 
-2. Signature Verification: Leveraging ideas from SigNet (Dey et al., 2017), we include an offline signature dataset to demonstrate writer-independent verification.
+Simulation Validation: Learn a similarity metric to flag unacceptable deviations between reference and new simulation images (flow fields, contour plots, etc.).
 
-Because of confidentiality constraints, the actual simulation datasets cannot be included. Instead, a small signature dataset is bundled under dataset/ for general testing.
+Generalization: Apply the same network architecture and training pipeline to any image-comparison use case (e.g., signature verification).
 
-Key Features:
-
-Generalized Architecture: Convolutional Siamese network with a ResNet-50 backbone producing 256-dimensional embeddings.
-
-Contrastive Loss: Custom DistanceLayer implements contrastive loss (α=5, margin=0.5) to learn meaningful similarity metrics.
-
-Multiple Domains: Although real simulation data is confidential, the model has been validated on synthetic flow-field examples and a public signature dataset.
-
-Visualization & Interpretability: After evaluation, similarity distributions and error-localization heatmaps are generated via utils.plotSimilarities.
+Interpretability: Generate similarity scores and visual maps highlighting regions responsible for mismatches.
 
 ### 1. Clone your fork
 
