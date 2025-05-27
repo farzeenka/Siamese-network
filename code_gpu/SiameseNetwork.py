@@ -18,13 +18,13 @@ beta = 1
 
 # Using relative paths for datasets
 train_dataset = data_generator.prepareTfDataset(
-    "../datasetF1/Invalid",
-    "../datasetF1/Valid", 18
+    "../dataset/Invalid",
+    "../dataset/Valid", 18
 )
 
 test_dataset = data_generator.prepareTfDatasetTest(
-    "../datasetF1/Invalid",
-    "../datasetF1/Valid", 18
+    "../dataset/Invalid",
+    "../dataset/Valid", 18
 )
 
 base_cnn = resnet.ResNet50(
