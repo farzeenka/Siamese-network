@@ -21,7 +21,7 @@ Flexible Data Handling: Data generators load and preprocess images from dataset/
 
 Evaluation & Visualization: After training, the model computes cosine similarity distributions on test splits and plots them via utils.plotSimilarities, providing intuitive diagnostics of model performance.
 
-This implementation is motivated by SigNet (Dey et al., 2017) fileciteturn0file0, extended to new simulation-based signature datasets (F1 and Gear Pump) and enriched with interpretability visualizations.
+This implementation is motivated by SigNet (Dey et al., 2017).
 
 
 
