@@ -29,13 +29,10 @@ This implementation is motivated by SigNet (Dey et al., 2017).
 
 ```bash
 git clone git@github.com:farzeenka/Siamese-network.git
-cd Siamese-network
 ```
 
 ### 2. Install dependencies
 
 ```bash
-# On WSL2 (Windows) or Linux
 pip install -r requirements.txt
 ```
-# Siamese-network
