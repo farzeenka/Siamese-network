@@ -1,0 +1,11 @@
+literature/*.:Zone.Identifier
+Zone.Identifier
+literature/*Zone.Identifier
+code_cpu/cpuTF
+.vscode/
+dataset/*Zone.Identifier
+code_gpu/demo.py
+code_gpu/__pycache__
+ms
+req.txt
+__pycache__
