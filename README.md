@@ -1,4 +1,4 @@
-# Siamese Network for Flow-Field Validation
+# Siamese Network for General Image Similarity
 
 ## Overview
 
