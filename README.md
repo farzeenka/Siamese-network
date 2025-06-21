@@ -8,7 +8,7 @@ Key objectives:
 
 Simulation Validation: Learn a similarity metric to flag unacceptable deviations between reference and new simulation images (flow fields, contour plots, etc.).
 
-Generalization: Apply the same network architecture and training pipeline to any image-comparison use case (e.g., signature verification).
+Generalization: Apply the same network architecture and training pipeline to any image-comparison use case (e.g., signature verification, flow field simulations).
 
 Interpretability: Generate similarity scores and visual maps highlighting regions responsible for mismatches.
 
